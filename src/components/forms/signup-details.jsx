@@ -64,7 +64,7 @@ const SignUpDetails = () => {
                   required: 'Password is required',
                   pattern: {
                     value:
-                      /^(?=.*[A-Z]{2})(?=.*[a-z]{2})(?=.*\d{2})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                      /^(?=(?:\D*\d){2})(?=(?:[^a-z]*[a-z]){2})(?=([^A-Z]*[A-Z]){2})(?=(?:\w*\W){2}).*/,
                     message:
                       'Must contain minimum 2 capital letters, 2 small letter, 2 numbers and 2 special characters.',
                   },
